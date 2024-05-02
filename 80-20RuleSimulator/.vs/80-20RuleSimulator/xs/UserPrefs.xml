@@ -1,25 +1,28 @@
 ﻿<Properties StartupConfiguration="{4E1B67E3-7C8C-4208-214E-77A45FCC718E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerCameraController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ActorSpawner.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerCameraController.cs" Line="22" Column="1" />
+      <File FileName="Assets/Scripts/PlayerCameraController.cs" />
+      <File FileName="Assets/Scripts/ActorSpawner.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="80-20RuleSimulator">
             <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="ActorSpawner.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5f031616-8218-4d58-a902-d8ba272a86ef" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6141e5bd-b49a-4523-b7f9-f4a4977252b5" />
 </Properties>

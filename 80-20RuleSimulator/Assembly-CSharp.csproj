@@ -61,9 +61,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Scripts/PlayerCameraController.cs" />
-    <Compile Include="Assets/Scripts/Unequal.cs" />
-    <Compile Include="Assets/Scripts/Equal.cs" />
-    <Compile Include="Assets/Scripts/EquityVsInequityForGreaterGoodOfSpecies/Humanoid.cs" />
+    <Compile Include="Assets/Scripts/ActorSpawner.cs" />
+    <Compile Include="Assets/Scripts/Logic/DayAndNight/Day.cs" />
+    <Compile Include="Assets/Scripts/Logic/DayAndNight/DayAndNightScript.cs" />
+    <Compile Include="Assets/Scripts/Actor.cs" />
+    <Compile Include="Assets/Scripts/Logic/Controller.cs" />
+    <Compile Include="Assets/Scripts/Logic/DayAndNight/State.cs" />
+    <Compile Include="Assets/Scripts/Logic/DayAndNight/Night.cs" />
+    <Compile Include="Assets/Scripts/Logic/StatsCard.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
