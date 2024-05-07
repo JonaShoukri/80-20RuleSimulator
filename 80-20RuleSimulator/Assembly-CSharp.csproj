@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/PlayerCameraController.cs" />
     <Compile Include="Assets/Scripts/ActorSpawner.cs" />
+    <Compile Include="Assets/Scripts/Plane.cs" />
     <Compile Include="Assets/Scripts/Logic/DayAndNight/Day.cs" />
     <Compile Include="Assets/Scripts/Logic/DayAndNight/DayAndNightScript.cs" />
     <Compile Include="Assets/Scripts/Actor.cs" />

@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace Logic.DayAndNight
 {
     public class Day : State
@@ -5,8 +7,11 @@ namespace Logic.DayAndNight
         private static Day instance = new Day();
         private Day(){}
         
-        public void change(DayAndNightScript dns){
-            dns.state = Night.Instance();
+        new public void Change( Controller controller){
+            Debug.Log("Changing to Night");
+            
+            // Change state to night
+            controller.SetState(Night.Instance());
         }
         public static Day Instance(){
             return instance;

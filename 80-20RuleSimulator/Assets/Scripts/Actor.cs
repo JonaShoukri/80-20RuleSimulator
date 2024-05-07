@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Logic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Actor : MonoBehaviour
 {
@@ -17,5 +18,10 @@ public class Actor : MonoBehaviour
     void Update()
     {
         
+    }
+    
+    public float DistanceTo(Actor other)
+    {
+        return Mathf.Sqrt(Mathf.Pow(this.transform.position.x - other.transform.position.x, 2) + Mathf.Pow(this.transform.position.y - other.transform.position.y, 2));
     }
 }

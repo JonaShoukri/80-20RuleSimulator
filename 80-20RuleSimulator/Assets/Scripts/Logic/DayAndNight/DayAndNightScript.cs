@@ -1,35 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
+using Logic;
 using Logic.DayAndNight;
 using UnityEngine;
 
 public class DayAndNightScript : MonoBehaviour
 {
-    // Adjust these angles according to your setup
     public float sunriseAngle = 0f;
     public float sunsetAngle = 180f;
-    public State state = new State();
+    private float nextChangeTime = 0f;
+    public float changeInterval = 0.3f;
 
     private void Update()
     {
-        // Get the current rotation of the directional light
-        float currentRotation = transform.rotation.eulerAngles.x;
+        float currentRotation = transform.rotation.x;
 
-        // Check if the rotation angle is close to sunrise or sunset angles
-        if (Mathf.Approximately(currentRotation, sunriseAngle) && state is not Day)
+        if ((Mathf.Abs(currentRotation - sunriseAngle) < 0.1f) || (Mathf.Abs(currentRotation - sunsetAngle) < 0.1f))
         {
-            // Trigger sunrise event
-            ChangeState();
-        }
-        else if (Mathf.Approximately(currentRotation, sunsetAngle) && state is not Night)
-        {
-            // Trigger sunset event
             ChangeState();
         }
     }
-    
+
     public void ChangeState()
     {
-        state.change(this);
+        if (Time.time >= nextChangeTime)
+        {
+            Controller.Instance().ChangeState();
+            nextChangeTime = Time.time + changeInterval;
+        }
     }
 }

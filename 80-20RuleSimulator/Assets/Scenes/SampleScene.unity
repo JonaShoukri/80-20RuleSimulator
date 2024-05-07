@@ -153,10 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcPrefabs:
-  - {fileID: 3811819767618656119, guid: b829e2ecfb11243b9bf11c2f0b64b489, type: 3}
-  - {fileID: 6464263452866022644, guid: ab6a78008c80e421cbe200673e6c3479, type: 3}
+  - {fileID: 3077762391691023155, guid: fcbe133f011e94a14b6d7317ab03993e, type: 3}
   numberOfNPCs: 100
-  spawnRadius: 5
+  spawnRadius: 15
 --- !u!4 &429772688
 Transform:
   m_ObjectHideFlags: 0
@@ -303,6 +302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sunriseAngle: 0
   sunsetAngle: 180
+  changeInterval: 1
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,6 +419,8 @@ GameObject:
   - component: {fileID: 1878726452}
   - component: {fileID: 1878726451}
   - component: {fileID: 1878726450}
+  - component: {fileID: 1878726453}
+  - component: {fileID: 1878726454}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -486,11 +488,44 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1878726453
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878726448}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1878726454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878726448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5685a6f333b4c96811a2a17aba881c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

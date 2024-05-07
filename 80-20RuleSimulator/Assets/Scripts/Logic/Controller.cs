@@ -1,15 +1,44 @@
 using System.Collections.Generic;
+using Logic.DayAndNight;
 using UnityEngine;
 
 namespace Logic
 {
     public class Controller
     {
+        //FIELDS
         private static Controller instance = new Controller();
         private List<Actor> _actors;
-        private Controller(){}
+        private State _dayNightState;
+
+        //CONSTRUCTOR
+        private Controller()
+        {
+            _actors = new List<Actor>();
+            _dayNightState = Night.Instance();
+        }
+        
+        //GETTERS
         public static Controller Instance(){
             return instance;
+        }
+        public List<Actor> GetActors()
+        {
+            return _actors;
+        }
+        public State GetState()
+        {
+            return _dayNightState;
+        }
+        
+        //SETTERS   
+        public void ChangeState()
+        {
+            _dayNightState.Change(this);
+        }
+        public void SetState(State state)
+        {
+            _dayNightState = state;
         }
         public void AddActor(Actor actor)
         {

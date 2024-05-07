@@ -359,6 +359,7 @@
 "Assets/Scripts/Logic/DayAndNight/Night.cs"
 "Assets/Scripts/Logic/DayAndNight/State.cs"
 "Assets/Scripts/Logic/StatsCard.cs"
+"Assets/Scripts/Plane.cs"
 "Assets/Scripts/PlayerCameraController.cs"
 -langversion:9.0
 

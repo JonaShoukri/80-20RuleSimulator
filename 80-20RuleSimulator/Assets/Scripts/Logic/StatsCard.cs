@@ -4,14 +4,14 @@ namespace Logic
 {
     public class StatsCard
     {
-        private float equity;
-        private float value;
-        private float xFactor;
+        public float equity;
+        public float value;
+        public float xFactor;
         
         public StatsCard()
         {
-            equity = 100000;
-            value = 100000;
+            equity = 5000;
+            value = 5000;
             
             // Generate a Gaussian distributed random number for xFactor
             Random random = new Random();
@@ -27,7 +27,14 @@ namespace Logic
             // Clamp the value between 1.0 and 1.05
             xFactor = (float)Math.Max(1.0, Math.Min(1.05, randNormal));
         }
+        public StatsCard(StatsCard other)
+        {
+            equity = other.equity;
+            value = other.value;
+            xFactor = other.xFactor;
+        }
         
+        //GETTERS
         public float GetEquity()
         {
             return equity;
@@ -41,6 +48,20 @@ namespace Logic
         public float GetXFactor()
         {
             return xFactor;
+        }
+        
+        //SETTERS
+        public void Bonus()
+        {
+            equity *= 1.025f;
+        }
+        public void SetEquity(float newValue)
+        {
+            value = newValue;
+        }
+        public void SetValue(float newValue)
+        {
+            value = newValue;
         }
     }
 }
